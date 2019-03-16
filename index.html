@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale = 1">        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>SDFinal</title>
+    </head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="References.html">References</a>
+        <a href="Practice.html">Practice</a>
+        <a href="About.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myNavFunction()">&#9776;</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Welcome to Codepedia</h2>
+
+        <table style="padding-right: 10%;">
+            <tr>
+                <td><p>This application is designed to help those who may need a little help when it comes to programing logic. Have a look around and check out our content!</p></td>
+            <tr>
+        </table>
+    </div>
+
+    <script>
+        function myNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

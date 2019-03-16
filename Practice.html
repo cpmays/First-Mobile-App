@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/quiz.css">
+    <title>SDFinal</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="References.html">References</a>
+        <a href="Practice.html">Practice</a>
+        <a href="About.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myNavFunction()">&#9776;</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Practice</h2>
+
+
+
+        <div id="quiz"></div>
+        <br>
+        <center>
+            <div>
+                <button id="submit">Evaluate</button>
+                <button id="goBack" onclick="goBack()">Go Back</button>
+            </div>
+        </center>
+
+        <div id="results"></div>
+        <div id="correct"></div>
+
+    </div>
+
+    <script>
+        (function () {
+            function buildQuiz() {
+               
+                const output = [];
+
+                
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                    
+                    const answers = [];
+
+                    
+                    for (letter in currentQuestion.answers) {
+                       
+                        answers.push(
+                            `		<label>
+					<input type="radio" name="question${questionNumber}" value="${letter}">
+					${letter} :
+					${currentQuestion.answers[letter]}
+				</label>`
+                        );
+                    }
+
+                    
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join("")} </div>`
+                    );
+                });
+
+                
+                quizContainer.innerHTML = output.join("");
+            }
+
+            function showResults() {
+                
+                const answerContainers = quizContainer.querySelectorAll(".answers");
+
+                
+                let numCorrect = 0;
+
+                
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                    
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+
+                    
+                    if (userAnswer === currentQuestion.correctAnswer) {
+                        
+                        numCorrect++;
+
+                        
+                        answerContainers[questionNumber].style.color = "green";
+                    } else {
+                        
+                        answerContainers[questionNumber].style.color = "red";
+
+                        giveAnswer();
+                    }
+                });
+
+                
+                resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+
+            }
+
+            const quizContainer = document.getElementById("quiz");
+            const resultsContainer = document.getElementById("results");
+            const submitButton = document.getElementById("submit");
+
+            function giveAnswer() {
+                document.getElementById('correct').innerHTML = 'Answer Key: 1 C, 2 A, 3 A, 4 B';
+            }
+
+
+
+            const myQuestions = [
+                {
+                    question: "1. What is the output of the loop?<br><br>x = 7;<br>do<br>{ print x;<br> x++<br>} while (x < 6);<br>",
+                    answers: {
+                        a: "1",
+                        b: "It will not execute",
+                        c: "7",
+                        d: "0"
+                    },
+                    correctAnswer: "c"
+                },
+                {
+                    question: "2. What variable type is ideal for representing number ranging from -2,147,483,648 to 2,147,483,647?",
+                    answers: {
+                        a: "Long",
+                        b: "Short",
+                        c: "String"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "3. A method can define the behavior of an object?",
+                    answers: {
+                        a: "True",
+                        b: "False"
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "4. The variable type integer is ideal for storing decimal values?",
+                    answers: {
+                        a: "True",
+                        b: "False"
+                    },
+                    correctAnswer: "b"
+                }
+            ];
+
+            
+            buildQuiz();
+
+            
+            submitButton.addEventListener("click", showResults);
+        })();
+    </script>
+
+    <script>
+        function myNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

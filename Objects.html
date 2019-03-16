@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SDFinal</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="References.html">References</a>
+        <a href="Practice.html">Practice</a>
+        <a href="About.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myNavFunction()">&#9776;</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Objects</h2>
+        <table style="padding-right: 10%;">
+            <tr>
+                <td><p>In the class-based object-oriented programming paradigm, an "object" refers to a particular representation of an instance of a class. These representation can be used to describe entities found in real life such as a dog.</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><p>State : It is represented by attributes of an object. It also reflects the properties of an object.</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><p>Behavior : It is represented by methods of an object. It also reflects the response of an object with other objects.</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><p>Identity : It gives a unique name to an object and enables one object to interact with other objects.</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Example</h3></td>
+            <tr>
+
+            <tr>
+                <td><p>Lets say that we want to create a dog object.</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><p>Output: </p></td>
+            <tr>
+        </table>
+    </div>
+
+    <script>
+        function myNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <center>
+        <div>
+            <button id="goBack" onclick="goBack()">Go Back</button>
+        </div>
+    </center>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

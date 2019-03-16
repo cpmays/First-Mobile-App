@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SDFinal</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="References.html">References</a>
+        <a href="Practice.html">Practice</a>
+        <a href="About.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myNavFunction()">&#9776;</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Arrays</h2>
+        <table>
+            <tr>
+                <td><p>	An array data structure, or simply an array, is a data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key. An array is stored so that the position of each element can be computed from its index tuple by a mathematical formula.</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Example</h3></td>
+            <tr>
+
+            <tr>
+                <td><p>int arr[] = {10, 20, 30, 40, 50};</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+        </table>
+    </div>
+
+    <script>
+        function myNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <center>
+        <div>
+            <button id="goBack" onclick="goBack()">Go Back</button>
+        </div>
+    </center>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

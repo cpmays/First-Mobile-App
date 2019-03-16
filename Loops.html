@@ -1,0 +1,145 @@
+﻿<<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SDFinal</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="References.html">References</a>
+        <a href="Practice.html">Practice</a>
+        <a href="About.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myNavFunction()">&#9776;</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Loops</h2>
+        <table style="padding-right: 10%;">
+            <tr>
+                <td><p>A loop is a sequence of instruction s that is continually repeated until a certain condition is reached. Typically, a certain process is done, such as getting an item of data and changing it, and then some condition is checked such as whether a counter has reached a prescribed number</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>While Loop</h3></td>
+            <tr>
+
+            <tr>
+                <td><p>Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Do-While Loop</h3></td>
+            <tr>
+
+            <tr>
+                <td><p>a do while loop is a control flow statement that executes a block of code at least once, and then repeatedly executes the block, or not, depending on a given boolean condition at the end of the block. ... If it is true, the code executes the body of the loop again</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>For Loop</h3></td>
+            <tr>
+
+            <tr>
+                <td><p>Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p></td>
+            <tr>
+            <tr>
+                <td><br></td>
+            <tr>
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Try This...</h3></td>
+            <tr>
+
+            <tr>
+                <td><h3>Select a value for "x" to see the output of the do while loop.<br><br>x = ?;<br>do<br>{ print x;<br> x++<br>} while (x < 3);</h3></td>
+            <tr>
+
+            <tr>
+                <td>
+                    <select name="xample" id="xample">
+                        <option value="0" onclick="codeExp(this.value);">X = 0;</option>
+                        <option value="1" onclick="codeExp(this.value);">X = 1;</option>
+                        <option value="3" onclick="codeExp(this.value);">X = 3;</option>
+                        <option value="default" onclick="codeExp(this.value);">Clear</option>
+                    </select>
+                </td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Output: </h3></td>
+            <tr>
+
+            <tr>
+                <td><h4><div id="example"></div></h4></td>
+            <tr>
+        </table>
+    </div>
+
+
+    <script>
+        function codeExp(myExp) {
+            switch (myExp) {
+                case "1":
+                    document.getElementById('example').innerHTML = '123';
+                    break
+                case "3":
+                    document.getElementById('example').innerHTML = '3';
+                    break
+                case "0":
+                    document.getElementById('example').innerHTML = '0123';
+                    break
+                default:
+                    document.getElementById('example').innerHTML = '';
+            }
+        }
+    </script>
+
+    <script>
+        function myNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <center>
+        <div>
+            <button id="goBack" onclick="goBack()">Go Back</button>
+        </div>
+    </center>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

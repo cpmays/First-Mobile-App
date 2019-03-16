@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SDFinal</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="References.html">References</a>
+        <a href="Practice.html">Practice</a>
+        <a href="About.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myNavFunction()">&#9776;</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>About Us</h2>
+        <table style="padding-right: 10%;">
+            <tr>
+                <td><p>This application was designed and created in the spring Semester of 2018 by the following:</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Creator: Christopher Mays</h3></td>
+            <tr>
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Date: April 17, 2018</h3></td>
+            <tr>
+</table>
+    </div>
+
+    <script>
+        function myNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <br><br><br>
+    <center>
+        <div>
+            <button id="goBack" onclick="goBack()">Go Back</button>
+        </div>
+    </center>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

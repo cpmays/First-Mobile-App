@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SDFinal</title>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="References.html">References</a>
+        <a href="Practice.html">Practice</a>
+        <a href="About.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myNavFunction()">&#9776;</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Functions</h2>
+        <table>
+            <tr>
+                <td><p>Functions are a construct to structure programs. They are known in most programming languages, sometimes also called subroutines or procedures. Functions are used to utilize code in more than one place in a program. The only way without functions to reuse code consists in copying the code.</p></td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><h3>Example</h3></td>
+            <tr>
+
+            <tr>
+                <td>
+                    <p>
+                        def add(x, y):<br>
+                        """Return x plus y"""<br>
+                        return x + y"
+                    </p>
+                </td>
+            <tr>
+
+            <tr>
+                <td><br></td>
+            <tr>
+
+            <tr>
+                <td><p>Output: the sum of x and y. So if x was equal to 4 and why was equal to 3, then the output would be 7.</p></td>
+            <tr>
+        </table>
+    </div>
+
+    <script>
+        function myNavFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <br><br><br>
+    <center>
+        <div>
+            <button id="goBack" onclick="goBack()">Go Back</button>
+        </div>
+    </center>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
